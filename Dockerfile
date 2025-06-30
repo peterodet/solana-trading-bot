@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 3000
 
 # Start the bot using node built file instead of ts-node for better perf
-CMD ["npx", "ts-node", "src/index.ts"]
+CMD ["npx", "ts-node", "index.ts"]
