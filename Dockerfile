@@ -13,11 +13,8 @@ RUN npm install --production
 # Copy the rest of the source code
 COPY . .
 
-# Build the TypeScript project
-RUN npm run build
-
 # Expose port if needed (Coolify will handle ports but for future reference)
 EXPOSE 3000
 
 # Start the bot using node built file instead of ts-node for better perf
-CMD ["node", "dist/index.js"]
+CMD ["npx", "ts-node", "src/index.ts"]
